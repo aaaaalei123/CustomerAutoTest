@@ -17,7 +17,7 @@ public class Browser {
 		// 与浏览器同步非常重要，必须等待浏览器加载完成
 		webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		// 打开目标地址
-		webDriver.get("http://testorchdbs.yufengtek.com/#/login");
+		webDriver.get("http://customer.yufengtek.com/?#/login");
 		Thread.sleep(1000);
 	}
 }
