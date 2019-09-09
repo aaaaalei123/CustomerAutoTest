@@ -13,6 +13,7 @@ public class Audit {
 		// 点击进入设备登记界面
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[3]")).click();
 		
-		
+		// 搜索客户姓名
+		webDriver.findElement(By.cssSelector("input[placeholder='搜索客户姓名']")).sendKeys("大哲");
 	}
 }
