@@ -11,7 +11,7 @@ public class Login {
 		WebDriver webDriver = WebDriverTool.webDriver;
 		
 		// 登录
-		webDriver.findElement(By.cssSelector("input[placeholder='用户名']")).sendKeys("18370452013");
+		webDriver.findElement(By.cssSelector("input[placeholder='用户名']")).sendKeys("18970776473");
 		Thread.sleep(1000);
 	    webDriver.findElement(By.cssSelector("input[placeholder='密码']")).sendKeys("abc123");
 	    Thread.sleep(1000);
