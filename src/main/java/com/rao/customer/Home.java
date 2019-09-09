@@ -35,6 +35,18 @@ public class Home {
 		Thread.sleep(1000);
 		
 		// 客户增长曲线
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 395, 697).perform();
+		Thread.sleep(700);
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 562, 697).perform();
+		Thread.sleep(700);
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 736, 697).perform();
+		Thread.sleep(700);
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 906, 697).perform();
+		Thread.sleep(700);
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 1071, 697).perform();
+		Thread.sleep(700);
+		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 1240, 697).perform();
+		Thread.sleep(700);
 		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 1408, 836).perform();
 		Thread.sleep(700);
 		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 1581, 729).perform();
