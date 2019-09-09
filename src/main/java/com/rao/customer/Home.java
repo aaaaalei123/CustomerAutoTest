@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import com.rao.customer.tool.WebDriverTool;
 
+// 首页
 public class Home {
 	public void PageRun() throws Exception{
 		WebDriver webDriver = WebDriverTool.webDriver;
