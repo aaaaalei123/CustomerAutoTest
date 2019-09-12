@@ -1,11 +1,10 @@
 package com.rao.customer;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 import com.rao.customer.tool.JudgeElement;
-import com.rao.customer.tool.SetValue;
+import com.rao.customer.tool.PageTool;
 import com.rao.customer.tool.WebDriverTool;
 
 // 审核登记界面
@@ -13,16 +12,17 @@ public class Audit {
 	public void PageRun() throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;
 		JudgeElement judge = new JudgeElement();
+		PageTool pageTool = new PageTool();
 		
 		// 点击进入设备登记界面
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[3]")).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		// 搜索客户姓名
 		webDriver.findElement(By.cssSelector("input[placeholder='搜索客户姓名']")).sendKeys("大哲");
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[2]/form/div[2]/div/button")).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		// 刷新
 		webDriver.navigate().refresh();
@@ -30,7 +30,7 @@ public class Audit {
 		
 		// 点击审核
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[3]/div/table/tr[2]/td[8]/div/button")).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		String hts = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[6]/div/div[2]/div[2]/img";
 		String cqzs = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[7]/div/div[2]/div[2]/img";
@@ -126,22 +126,11 @@ public class Audit {
 			
 			// 点击关闭
 			webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button")).click();
-			Thread.sleep(500);
+			Thread.sleep(1000);
 		}
 		
 		// 分页操作
-		// 点击第二页
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]")).click();
-		Thread.sleep(500);
-		// 点击上一页
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/button[1]")).click();
-		Thread.sleep(500);
-		// 点击下一页
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/button[2]")).click();		
-		Thread.sleep(500);
-		// 输入并前往第一页
-		SetValue.setElementValue(webDriver.findElement(By.cssSelector("input[type='number'][class='el-input__inner']")), "1");
-		webDriver.findElement(By.cssSelector("input[type='number'][class='el-input__inner']")).sendKeys(Keys.chord(Keys.ENTER));
-		Thread.sleep(500);
+		pageTool.PaginationTool();
+
 	}
 }

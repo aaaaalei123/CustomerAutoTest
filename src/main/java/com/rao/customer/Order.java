@@ -3,11 +3,13 @@ package com.rao.customer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.rao.customer.tool.PageTool;
 import com.rao.customer.tool.WebDriverTool;
 
 public class Order {
 	public void PageRun() throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;
+		PageTool pageTool = new PageTool();
 		
 		// 点击进入设备订单界面
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[4]")).click();
@@ -38,5 +40,8 @@ public class Order {
 		// 点击关闭
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button")).click();
 		Thread.sleep(500);
+		
+		// 分页操作
+		pageTool.PaginationTool();
 	}
 }
