@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import com.rao.customer.tool.Browser;
 import com.rao.customer.tool.WebDriverTool;
 
-
 public class AllRun {
 	public static void main(String[] args) throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;
@@ -13,6 +12,7 @@ public class AllRun {
 		Login login = new Login();
 		Home home = new Home();
 		Audit audit = new Audit();
+		Order order = new Order();
 		
 		// 打开浏览器
 		browser.OpenBrowser();
@@ -26,7 +26,10 @@ public class AllRun {
 		// 审核登记
 		audit.PageRun();
 		
+		// 设备订单
+		order.PageRun();
+		
 		Thread.sleep(2000);
-		webDriver.quit();
+//		webDriver.quit();
 	}
 }
