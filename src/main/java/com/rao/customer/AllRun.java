@@ -13,6 +13,7 @@ public class AllRun {
 		Home home = new Home();
 		Audit audit = new Audit();
 		Order order = new Order();
+		Customer customer = new Customer();
 		
 		// 打开浏览器
 		browser.OpenBrowser();
@@ -21,13 +22,16 @@ public class AllRun {
 		login.PageRun();
 		
 		// 首页
-//		home.PageRun();
+/*		home.PageRun();
 		
 		// 审核登记
 		audit.PageRun();
 		
 		// 设备订单
-		order.PageRun();
+		order.PageRun();*/
+		
+		// 资料管理
+		customer.PageRun();
 		
 		Thread.sleep(2000);
 //		webDriver.quit();
