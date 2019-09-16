@@ -14,6 +14,7 @@ public class AllRun {
 		Audit audit = new Audit();
 		Order order = new Order();
 		Customer customer = new Customer();
+		Employee employee = new Employee();
 		
 		// 打开浏览器
 		browser.OpenBrowser();
@@ -28,10 +29,13 @@ public class AllRun {
 		audit.PageRun();
 		
 		// 设备订单
-		order.PageRun();*/
+		order.PageRun();
 		
 		// 资料管理
-		customer.PageRun();
+		customer.PageRun();*/
+		
+		// 员工管理
+		employee.PageRun();
 		
 		Thread.sleep(2000);
 //		webDriver.quit();
