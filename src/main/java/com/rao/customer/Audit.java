@@ -32,6 +32,14 @@ public class Audit {
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[3]/div/table/tr[2]/td[8]/div/button")).click();
 		Thread.sleep(1000);
 		
+		/**
+		 * hts = 合同书图片
+		 * cqzs = 产权证书图片
+		 * fd = 放大按钮
+		 * sx = 缩小按钮
+		 * xz = 旋转按钮
+		 * gb = 关闭按钮
+		 * */
 		String hts = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[6]/div/div[2]/div[2]/img";
 		String cqzs = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[7]/div/div[2]/div[2]/img";
 		String fd = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[9]/div[3]/div[3]/i";
