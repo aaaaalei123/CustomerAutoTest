@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.rao.customer.tool.PageTool;
 import com.rao.customer.tool.WebDriverTool;
 
+// 设备订单界面
 public class Order {
 	public void PageRun() throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;

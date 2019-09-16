@@ -7,6 +7,7 @@ import com.rao.customer.tool.JudgeElement;
 import com.rao.customer.tool.PageTool;
 import com.rao.customer.tool.WebDriverTool;
 
+// 资料管理界面 
 public class Customer {
 	public void PageRun() throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;
