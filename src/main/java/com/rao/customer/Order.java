@@ -3,6 +3,7 @@ package com.rao.customer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.rao.customer.tool.JudgeElement;
 import com.rao.customer.tool.PageTool;
 import com.rao.customer.tool.WebDriverTool;
 
@@ -10,6 +11,7 @@ import com.rao.customer.tool.WebDriverTool;
 public class Order {
 	public void PageRun() throws Exception {
 		WebDriver webDriver = WebDriverTool.webDriver;
+		JudgeElement judge = new JudgeElement();
 		PageTool pageTool = new PageTool();
 		
 		// 点击进入设备订单界面
@@ -43,6 +45,9 @@ public class Order {
 		Thread.sleep(500);
 		
 		// 分页操作
-		pageTool.PaginationTool();
+		String q = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]";
+		if (judge.ElementExist(webDriver, By.xpath(q)) == true) {
+			pageTool.PaginationTool();
+		}
 	}
 }

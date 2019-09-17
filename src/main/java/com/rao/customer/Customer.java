@@ -135,6 +135,9 @@ public class Customer {
 		Thread.sleep(500);
 		
 		// 分页操作
-		pageTool.PaginationTool();
+		String q = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]";
+		if (judge.ElementExist(webDriver, By.xpath(q)) == true) {
+			pageTool.PaginationTool();
+		}
 	} 
 }
