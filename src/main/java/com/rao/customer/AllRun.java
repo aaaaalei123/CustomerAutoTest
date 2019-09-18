@@ -16,6 +16,7 @@ public class AllRun {
 		Customer customer = new Customer();
 		Employee employee = new Employee();
 		Admin admin = new Admin();
+		Notice notice = new Notice();
 		
 		// 打开浏览器
 		browser.OpenBrowser();
@@ -24,7 +25,7 @@ public class AllRun {
 		login.PageRun();
 		
 		// 首页
-/*		home.PageRun();
+		home.PageRun();
 		
 		// 审核登记
 		audit.PageRun();
@@ -39,9 +40,12 @@ public class AllRun {
 		employee.PageRun();
 		
 		// 管理员管理
-		admin.PageRun();*/
+		admin.PageRun();
+		
+		// 系统通知
+		notice.PageRun();
 		
 		Thread.sleep(2000);
-//		webDriver.quit();
+		webDriver.quit();
 	}
 }
