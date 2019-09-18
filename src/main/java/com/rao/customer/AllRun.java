@@ -36,10 +36,10 @@ public class AllRun {
 		customer.PageRun();
 		
 		// 员工管理
-		employee.PageRun();*/
+		employee.PageRun();
 		
 		// 管理员管理
-		admin.PageRun();
+		admin.PageRun();*/
 		
 		Thread.sleep(2000);
 //		webDriver.quit();

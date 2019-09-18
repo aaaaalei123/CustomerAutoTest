@@ -15,8 +15,8 @@ public class Admin {
 		JudgeElement judge = new JudgeElement();
 		
 		// 进入管理员管理界面
-		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[6]/div")).click();
-		Thread.sleep(500);
+/*		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[6]/div")).click();
+		Thread.sleep(500);*/
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[6]/ul/li[2]")).click();
 		Thread.sleep(1000);
 		
