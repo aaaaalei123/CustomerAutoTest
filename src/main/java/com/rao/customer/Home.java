@@ -22,6 +22,7 @@ public class Home {
 		Thread.sleep(1000);
 		
 		// 快捷方式
+		/*
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div[1]/div/div[1]/div/div[1]/div[2]/div/div/div[2]/div[1]/div/div")).click();
 		Thread.sleep(1000);
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[2]")).click();
@@ -34,6 +35,7 @@ public class Home {
 		Thread.sleep(1000);
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[2]")).click();
 		Thread.sleep(1000);
+		*/
 		
 		// 客户增长曲线
 		actions.moveToElement(webDriver.findElement(By.xpath("//*[@id='app']")), 395, 697).perform();

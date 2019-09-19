@@ -16,6 +16,6 @@ public class Login {
 	    webDriver.findElement(By.cssSelector("input[placeholder='密码']")).sendKeys("abc123");
 	    Thread.sleep(1000);
 	    webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[2]/div[3]")).click();
-	    Thread.sleep(1000);
+	    Thread.sleep(2000);
 	}
 }
