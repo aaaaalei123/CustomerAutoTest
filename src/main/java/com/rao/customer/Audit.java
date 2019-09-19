@@ -28,7 +28,7 @@ public class Audit {
 		webDriver.navigate().refresh();
 		Thread.sleep(1000);
 		
-		// 点击审核
+		// 点击审核|详情|派单
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[3]/div/table/tr[2]/td[8]/div/button")).click();
 		Thread.sleep(1000);
 		
@@ -49,9 +49,9 @@ public class Audit {
 		
 		// 判断是否审核
 		// 未审核
-		if (judge.ElementExist(webDriver, By.xpath("//span[contains(., '通 过')]")) == true) {
+		if (judge.verifyElementIsPresent("//span[contains(., '通 过')]", "xpath") == true) {
 			// 判断合同书是否有图片
-			if (judge.ElementExist(webDriver, By.xpath(hts)) == true ) {
+			if (judge.verifyElementIsPresent("//div[contains(., '合同书：')]/div/div/div/img", "xpath") == true ) {
 				// 点击图片
 				webDriver.findElement(By.xpath(hts)).click();
 				Thread.sleep(500);
@@ -67,10 +67,10 @@ public class Audit {
 				// 关闭图片
 				webDriver.findElement(By.xpath(gb)).click();
 				Thread.sleep(500);
-				
 			}
+			
 			// 判断产权证书是否有图片
-			if (judge.ElementExist(webDriver, By.xpath(cqzs)) == true) {
+			if (judge.verifyElementIsPresent("//div[contains(., '产权证书：')]/div/div/div/img", "xpath") == true) {
 				// 点击图片
 				webDriver.findElement(By.xpath(cqzs)).click();
 				Thread.sleep(500);
@@ -91,12 +91,13 @@ public class Audit {
 			// 点击审核
 			webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button[2]")).click();
 			// 点击驳回
-//			webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button[1]")).click();
+			//webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button[1]")).click();
 			
-		// 审核通过	
-		}else if(judge.ElementExist(webDriver, By.xpath("//span[contains(., '关 闭')]")) == true){
+			
+		// 已审核(详情)
+		}else if(judge.verifyElementIsPresent("//span[contains(., '关 闭')]", "xpath") == true){
 			// 判断合同书是否有图片
-			if (judge.ElementExist(webDriver, By.xpath(hts)) == true ) {
+			if (judge.verifyElementIsPresent("//div[contains(., '合同书：')]/div/div/div/img", "xpath") == true ) {
 				// 点击图片
 				webDriver.findElement(By.xpath(hts)).click();
 				Thread.sleep(500);
@@ -113,8 +114,9 @@ public class Audit {
 				webDriver.findElement(By.xpath(gb)).click();
 				Thread.sleep(500);
 			}
+			
 			// 判断产权证书是否有图片
-			if (judge.ElementExist(webDriver, By.xpath(cqzs)) == true) {
+			if (judge.verifyElementIsPresent("//div[contains(., '产权证书：')]/div/div/div/img", "xpath") == true) {
 				// 点击图片
 				webDriver.findElement(By.xpath(cqzs)).click();
 				Thread.sleep(500);
@@ -134,8 +136,9 @@ public class Audit {
 			
 			// 点击关闭
 			webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button")).click();
-			Thread.sleep(1000);
 		}
+		
+		Thread.sleep(1000);
 		
 		// 分页操作
 		String q = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]";
