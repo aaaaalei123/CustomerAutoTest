@@ -12,6 +12,7 @@ public class AllRun {
 		Login login = new Login();
 		Home home = new Home();
 		Audit audit = new Audit();
+		Audit2 audit2 = new Audit2();
 		Order order = new Order();
 		Customer customer = new Customer();
 		Employee employee = new Employee();
@@ -24,11 +25,12 @@ public class AllRun {
 		// 登录
 		login.PageRun();
 		
-		// 首页
+/*		// 首页
 		home.PageRun();
 		
 		// 审核登记
-		audit.PageRun();
+		audit.PageRun();*/
+		audit2.PageRun();
 		
 		// 设备订单
 		order.PageRun();
