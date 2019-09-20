@@ -73,8 +73,8 @@ public class Customer {
 		String xz = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[9]/div[3]/div[5]/i";
 		String gb = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[2]/div[9]/div[4]/i";
 		
-		// 判断合同书是否有图片
-		if (judge.ElementExist(webDriver, By.xpath(jdtj)) == true ) {
+		// 判断基地图集是否有图片
+		if (judge.verifyElementIsPresent("//div[contains(., '基地图集：')]/div/div/div/img", "xpath") == true ) {
 			// 点击图片
 			webDriver.findElement(By.xpath(jdtj)).click();
 			Thread.sleep(500);
@@ -93,7 +93,7 @@ public class Customer {
 					
 		}
 		// 判断合同书是否有图片
-		if (judge.ElementExist(webDriver, By.xpath(hts)) == true ) {
+		if (judge.verifyElementIsPresent("//div[contains(., '合同书：')]/div/div/div/img", "xpath") == true ) {
 			// 点击图片
 			webDriver.findElement(By.xpath(hts)).click();
 			Thread.sleep(500);
@@ -112,7 +112,7 @@ public class Customer {
 			
 		}
 		// 判断产权证书是否有图片
-		if (judge.ElementExist(webDriver, By.xpath(cqzs)) == true) {
+		if (judge.verifyElementIsPresent("//div[contains(., '产权证书：')]/div/div/div/img", "xpath") == true) {
 			// 点击图片
 			webDriver.findElement(By.xpath(cqzs)).click();
 			Thread.sleep(500);
