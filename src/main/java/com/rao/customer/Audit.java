@@ -141,8 +141,9 @@ public class Audit {
 		Thread.sleep(1000);
 		
 		// 分页操作
-		String q = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]";
-		if (judge.ElementExist(webDriver, By.xpath(q)) == true) {
+		String q1 = "//li[@class='number']";
+		String q2 = "//li[contains(., '2')]";
+		if (judge.verifyElementIsPresent(q1, "xpath") == true &  judge.verifyElementIsPresent(q2, "xpath") == true) {
 			pageTool.PaginationTool();
 		}
 

@@ -25,11 +25,11 @@ public class AllRun {
 		// 登录
 		login.PageRun();
 		
-/*		// 首页
+		// 首页
 		home.PageRun();
 		
 		// 审核登记
-		audit.PageRun();*/
+/*		audit.PageRun();*/
 		audit2.PageRun();
 		
 		// 设备订单
