@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class Browser {
 	public void OpenBrowser() throws Exception {
 		Thread.sleep(3000);   //等待3秒
-		System.setProperty("webdriver.chrome.driver","D:/JOBSoftware/chromedriver_win32/chromedriver.exe");   // 谷歌:后边路径修改为谷歌驱动路径
+		System.setProperty("webdriver.chrome.driver","D:\\JOBSoftware\\chromedriver_win32\\chromedriver.exe");   // 谷歌:后边路径修改为谷歌驱动路径
 		
 		// 引用 OpenChrome 打开浏览器
 		WebDriver webDriver = WebDriverTool.webDriver;
