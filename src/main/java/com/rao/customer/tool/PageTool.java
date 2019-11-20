@@ -11,16 +11,16 @@ public class PageTool {
 		// 分页操作
 		// 点击第二页
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]")).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		// 点击上一页
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/button[1]")).click();
-		Thread.sleep(500);
+		webDriver.findElement(By.cssSelector("button[type='button'][class='btn-prev']")).click();
+		Thread.sleep(1000);
 		// 点击下一页
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/button[2]")).click();		
-		Thread.sleep(500);
+		webDriver.findElement(By.cssSelector("button[type='button'][class='btn-next']")).click();		
+		Thread.sleep(1000);
 		// 输入并前往第一页
 		SetValue.setElementValue(webDriver.findElement(By.cssSelector("input[type='number'][class='el-input__inner']")), "1");
 		webDriver.findElement(By.cssSelector("input[type='number'][class='el-input__inner']")).sendKeys(Keys.chord(Keys.ENTER));
-		Thread.sleep(500);
+		Thread.sleep(1000);
 	}
 }

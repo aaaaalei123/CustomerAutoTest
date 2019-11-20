@@ -53,7 +53,7 @@ public class Customer {
 		Thread.sleep(1000);
 		
 		// 点击详情
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[3]/div/table/tr[3]/td[8]/div/button")).click();
+		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[3]/div/table/tr[7]/td[8]/div/button")).click();
 		Thread.sleep(1000);				
 		
 		/**

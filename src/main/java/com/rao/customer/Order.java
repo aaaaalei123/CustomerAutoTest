@@ -14,6 +14,8 @@ public class Order {
 		JudgeElement judge = new JudgeElement();
 		PageTool pageTool = new PageTool();
 		
+		Thread.sleep(1000);
+		
 		// 点击进入设备订单界面
 		webDriver.findElement(By.xpath("//*[@id='app']/section/aside/ul/li[4]")).click();
 		Thread.sleep(500);
