@@ -94,6 +94,9 @@ public class Customer {
 		}
 		// 判断合同书是否有图片
 		if (judge.verifyElementIsPresent("//div[contains(., '合同书：')]/div/div/div/img", "xpath") == true ) {
+			
+			
+		}else{
 			// 点击图片
 			webDriver.findElement(By.xpath(hts)).click();
 			Thread.sleep(500);
@@ -109,8 +112,9 @@ public class Customer {
 			// 关闭图片
 			webDriver.findElement(By.xpath(gb)).click();
 			Thread.sleep(500);
-			
 		}
+		
+		
 		// 判断产权证书是否有图片
 		if (judge.verifyElementIsPresent("//div[contains(., '产权证书：')]/div/div/div/img", "xpath") == true) {
 			// 点击图片

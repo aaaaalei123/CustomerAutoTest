@@ -21,7 +21,7 @@ public class Audit2 {
 		// 搜索客户姓名
 		webDriver.findElement(By.cssSelector("input[placeholder='搜索客户姓名']")).sendKeys("大哲");
 		Thread.sleep(1000);
-		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[2]/form/div[2]/div/button")).click();
+		webDriver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='至'])[1]/following::span[1]")).click();
 		Thread.sleep(1000);
 		
 		// 刷新

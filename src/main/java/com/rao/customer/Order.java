@@ -44,7 +44,7 @@ public class Order {
 		
 		// 点击关闭
 		webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[5]/div/div[3]/span/button")).click();
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 		
 		// 分页操作
 		String q = "//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[4]/ul/li[2]";
