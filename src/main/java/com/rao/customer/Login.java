@@ -10,9 +10,9 @@ public class Login {
 		WebDriver webDriver = WebDriverTool.webDriver;
 		
 		// 登录
-		webDriver.findElement(By.cssSelector("input[placeholder='用户名']")).sendKeys("18970776473");
+		webDriver.findElement(By.cssSelector("input[placeholder='用户名']")).sendKeys("");
 		Thread.sleep(1000);
-	    webDriver.findElement(By.cssSelector("input[placeholder='密码']")).sendKeys("abc123");
+	    webDriver.findElement(By.cssSelector("input[placeholder='密码']")).sendKeys("");
 	    Thread.sleep(1000);
 	    webDriver.findElement(By.xpath("//*[@id='app']/section/div/div/div/div/div[1]/div/div/div[2]/div[3]")).click();
 	    Thread.sleep(2000);
